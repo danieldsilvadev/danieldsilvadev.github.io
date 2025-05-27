@@ -23,4 +23,4 @@ O site foi criado com foco em uma interface limpa, responsiva e com boa performa
 ## 💻 Demonstração
 
 Você pode visualizar o site publicado aqui:  
-👉 [https://danieldsilvadev.github.io/portfolio-daniel-silva](https://danieldsilvadev.github.io/portfolio-daniel-silva) *(altere após publicar no GitHub Pages)*
+👉 [https://danieldsilvadev.github.io/](https://danieldsilvadev.github.io/)
