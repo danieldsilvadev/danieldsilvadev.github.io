@@ -5,12 +5,12 @@
   /* Cores principais */
   --color-background: #0d1224;
   --color-primary: #c1ff45;
+  --color-primary-hover: #b7ff26;
   --color-white: #ffffff;
   --color-light-gray: #d3d3d3;
   --color-blue-dark: #1a1e36;
   --color-accent-blue: #3b82f6;
   --color-purple: #8b5cf6;
-  --color-yellow: #facc15;
 
   /* Cores específicas de skills */
   --color-skill-html: #e34f26;
@@ -100,7 +100,8 @@ a {
 }
 
 .btn-contato:hover {
-  background-color: var(--color-yellow);
+  background-color: var(--color-primary-hover);
+  filter: brightness(1.1);
 }
 
 /* ============================================= */
@@ -142,7 +143,8 @@ a {
 }
 
 .btn-primary:hover {
-  background-color: var(--color-yellow);
+  background-color: var(--color-primary-hover);
+  filter: brightness(1.1);
 }
 
 /* ============================================= */
@@ -263,7 +265,7 @@ a {
 /* ============================================= */
 #meus-projetos {
   padding: 4rem 5%;
-  background-color: var(--color-background);
+  background:  radial-gradient(ellipse at center, var(--color-blue-dark) 0%, var(--color-background) 100%);
   color: var(--color-white);
 }
 
@@ -309,8 +311,73 @@ a {
 }
 
 .github-link:hover {
-  color: var(--color-yellow);
+  color: var(--color-primary-hover);
+  filter: brightness(1.1);
 }
+
+/* ============================================= */
+/* CONTATOS                                   */
+/* ============================================= */
+#contato {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out both;
+}
+
+#contato h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+#contato p {
+  font-size: 1.1rem;
+  color: var(--color-light-gray);
+  margin-bottom: 40px;
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+/* Links das redes */
+.redes-contato {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.redes-contato a {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  animation: fadeInUp 1.6s ease-in-out;
+}
+
+.redes-contato a:hover {
+  background-color: var(--color-primary-hover);
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  border-top: 1px solid var(--color-blue-dark);
+}
+
+.footer p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+
 
 /* ============================================= */
 /* MEDIA QUERIES                              */
@@ -395,6 +462,17 @@ a {
   }
 }
 
+@media (max-width: 600px) {
+  #contato h2 {
+    font-size: 2rem;
+  }
+
+  .redes-contato a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* ============================================= */
 /*  ANIMAÇÕES (KEYFRAMES)                     */
 /* ============================================= */
@@ -409,4 +487,25 @@ a {
     opacity: 1;
   }
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
