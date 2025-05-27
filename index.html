@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" href="imagens/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/headerMobile.css">
+    <title>Daniel Silva - Desenvolvedor Front-End</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">DS</div>
+        <nav class="nav">
+            <a href="#sobre">Sobre</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#meus-projetos">Projetos</a>
+        </nav>
+        <a href="#contato" class="btn-contato">Contato</a>
+    </header>
+    <header class="header-mobile">
+        <div class="logo-mobile">DS</div>
+
+        <button class="menu-btn-mobile" aria-label="Abrir menu">&#9776;</button>
+
+        <nav class="nav-mobile">
+            <button class="close-btn-mobile" aria-label="Fechar menu">&times;</button>
+            <a href="#sobre">Sobre</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#meus-projetos">Projetos</a>
+            <a href="#contato" class="btn-contato-mobile">Contato</a>
+        </nav>
+
+        <div class="overlay-mobile"></div>
+    </header>
+
+
+
+    <section class="hero">
+        <div class="content">
+            <h1>Eu sou <span>Daniel Silva</span></h1>
+            <h2>Front-End Developer</h2>
+            <a href="#meus-projetos" class="btn-primary">Meus Projetos</a>
+        </div>
+        <div class="photo-frame">
+            <img src="imagens/Perfil.JPG" alt="Foto Daniel Silva">
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>QUEM EU SOU?</h2>
+        <p>Sou desenvolvedor front-end com foco em ReactJS e interfaces modernas. Tenho conhecimento também em design
+            com Figma e frameworks como TailwindCSS e Firebase.</p>
+        <p>Meu objetivo é entregar sites rápidos, acessíveis e visualmente atraentes. Nas horas vagas, gosto de jogar e
+            ler livros técnicos e de ficção.</p>
+        <a href="#meus-projetos" class="btn-secondary">Ver Projetos</a>
+    </section>
+
+    <section id="habilidades" class="skills">
+        <h2 class="skills__title">MINHAS HABILIDADES</h2>
+        <div class="skills__grid">
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js-square"></i>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-react"></i>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-git-alt"></i>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-figma"></i>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-wind"></i> <!-- Wind icon para Tailwind -->
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-fire-alt"></i> <!-- Fire-alt para Firebase -->
+            </div>
+        </div>
+    </section>
+    <section id="meus-projetos">
+        <h1>MEUS PROJETOS</h1>
+
+        <div class="projeto-card">
+            <img src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2023/02/Portfolio-Desenvolvedor-Web.png"
+                alt="Projeto 1">
+            <div class="projeto-info">
+                <h2>Portfólio Pessoal</h2>
+                <a href="https://github.com/seunome/portfolio" target="_blank" class="github-link">Ver no GitHub</a>
+            </div>
+        </div>
+
+        <div class="projeto-card">
+            <img src="https://venngage-wordpress-pt.s3.amazonaws.com/uploads/2020/03/loja-virtual-1.png"
+                alt="Projeto 2">
+            <div class="projeto-info">
+                <h2>Loja Virtual</h2>
+                <a href="https://github.com/seunome/loja-virtual" target="_blank" class="github-link">Ver no GitHub</a>
+            </div>
+        </div>
+
+        <div class="projeto-card">
+            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230630/pngtree-3d-illustration-of-math-symbols-on-black-calculator-icon-image_3701395.jpg"
+                alt="Projeto 3">
+            <div class="projeto-info">
+                <h2>Calculadora JS</h2>
+                <a href="https://github.com/seunome/calculadora-js" target="_blank" class="github-link">Ver no
+                    GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

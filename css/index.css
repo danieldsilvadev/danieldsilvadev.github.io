@@ -1,0 +1,412 @@
+/* ============================================= */
+/* VARIÁVEIS GLOBAIS                          */
+/* ============================================= */
+:root {
+  /* Cores principais */
+  --color-background: #0d1224;
+  --color-primary: #c1ff45;
+  --color-white: #ffffff;
+  --color-light-gray: #d3d3d3;
+  --color-blue-dark: #1a1e36;
+  --color-accent-blue: #3b82f6;
+  --color-purple: #8b5cf6;
+  --color-yellow: #facc15;
+
+  /* Cores específicas de skills */
+  --color-skill-html: #e34f26;
+  --color-skill-css: #1572b6;
+  --color-skill-js: #f7df1e;
+  --color-skill-react: #61dafb;
+
+  /* Gradiente animado */
+  --c1: #c1ff45;
+  --c2: #3b82f6;
+  --c3: #facc15;
+  --c4: #8b5cf6;
+}
+
+/* Transições globais */
+a,
+button,
+.btn-primary,
+.btn-secondary,
+.btn-contato {
+  transition: all 0.3s ease;
+}
+
+
+/* ============================================= */
+/* RESET / ESTILO BASE                        */
+/* ============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-white);
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================================= */
+/* HEADER                                     */
+/* ============================================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  background: transparent;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.nav a {
+  margin: 0 1.5rem;
+  font-weight: 500;
+  color: var(--color-white);
+  opacity: 0.8;
+}
+
+.nav a:hover {
+  color: var(--color-primary);
+}
+
+.btn-contato {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--color-primary);
+  border-radius: 50px;
+  font-weight: bold;
+  color: var(--color-background);
+}
+
+.btn-contato:hover {
+  background-color: var(--color-yellow);
+}
+
+/* ============================================= */
+/* HERO SECTION                               */
+/* ============================================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7rem;
+  background: radial-gradient(ellipse at center, var(--color-blue-dark) 0%, var(--color-background) 100%);
+  min-height: 90vh;
+}
+
+.hero .content h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--color-white);
+}
+
+.hero .content h1 span {
+  color: var(--color-primary);
+}
+
+.hero .content h2 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  color: var(--color-light-gray);
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  font-weight: 700;
+  border-radius: 30px;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-yellow);
+}
+
+/* ============================================= */
+/* PHOTO FRAME (Imagem com borda animada)     */
+/* ============================================= */
+.photo-frame {
+  display: inline-block;
+  padding: 4px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3), var(--c4), var(--c1));
+  background-size: 400% 400%;
+  animation: gradientShift 6s ease infinite;
+
+  /* Adiciona transição e efeito de hover */
+  transition: transform 0.4s ease;
+}
+
+.photo-frame:hover {
+  transform: scale(1.05) rotate(3deg); /* Aumenta e gira a moldura inteira */
+}
+
+.photo-frame img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+
+  /* Remove o hover individual da imagem para evitar conflito */
+  transition: transform 0.4s ease;
+}
+
+
+
+/* ============================================= */
+/* SOBRE                                      */
+/* ============================================= */
+.sobre {
+  text-align: center;
+  padding: 5rem 10%;
+  background-color: var(--color-blue-dark);
+}
+
+.sobre h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.sobre p {
+  max-width: 800px;
+  margin: 0 auto 1rem auto;
+  color: var(--color-light-gray);
+}
+
+.btn-secondary {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+/* ============================================= */
+/* SKILLS                                     */
+/* ============================================= */
+.skills {
+  padding: 5rem 10%;
+  background: var(--color-background);
+  text-align: center;
+}
+
+.skills__title {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.skill-card {
+  width: 100px;
+  height: 100px;
+  background: var(--color-blue-dark);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card i {
+  font-size: 2.5rem;
+  color: var(--color-white);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================= */
+/* PROJETOS                                   */
+/* ============================================= */
+#meus-projetos {
+  padding: 4rem 5%;
+  background-color: var(--color-background);
+  color: var(--color-white);
+}
+
+#meus-projetos h1 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.projeto-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--color-blue-dark);
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.projeto-card img {
+  width: 250px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.projeto-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.github-link {
+  color: var(--color-accent-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.github-link:hover {
+  color: var(--color-yellow);
+}
+
+/* ============================================= */
+/* MEDIA QUERIES                              */
+/* ============================================= */
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav a {
+    margin: 0;
+  }
+
+  .hero {
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 5%;
+  }
+
+  .hero .content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero .content h2 {
+    font-size: 1.2rem;
+  }
+
+  .photo-frame img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .sobre {
+    padding: 4rem 8%;
+  }
+
+  .skills {
+    padding: 4rem 8%;
+  }
+
+  .skills__title {
+    font-size: 2rem;
+  }
+
+  .skills__grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  .skill-card {
+    width: 80px;
+    height: 80px;
+  }
+
+  .skill-card i {
+    font-size: 2rem;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-contato {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  .projeto-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projeto-card img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ============================================= */
+/*  ANIMAÇÕES (KEYFRAMES)                     */
+/* ============================================= */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
