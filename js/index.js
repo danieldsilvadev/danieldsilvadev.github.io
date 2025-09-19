@@ -1,19 +1,12 @@
-const menuBtn = document.querySelector('.menu-btn-mobile');
-const closeBtn = document.querySelector('.close-btn-mobile');
-const nav = document.querySelector('.nav-mobile');
-const overlay = document.querySelector('.overlay-mobile');
+const skills = document.querySelectorAll('.skill-card');
 
-menuBtn.addEventListener('click', () => {
-  nav.classList.add('open-mobile');
-  overlay.classList.add('active');
-});
-
-closeBtn.addEventListener('click', () => {
-  nav.classList.remove('open-mobile');
-  overlay.classList.remove('active');
-});
-
-overlay.addEventListener('click', () => {
-  nav.classList.remove('open-mobile');
-  overlay.classList.remove('active');
+skills.forEach(skill => {
+  const fill = skill.querySelector('.skill-fill');
+  const percent = skill.getAttribute('data-percent');
+  const percentText = skill.querySelector('.skill-percent');
+  
+  setTimeout(() => {
+    fill.style.width = percent + '%';
+    percentText.textContent = percent + '%';
+  }, 200);
 });

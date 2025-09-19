@@ -9,136 +9,194 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="image/portfolio.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="shortcut icon" href="imagens/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/headerMobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
     <title>Daniel Silva - Desenvolvedor Front-End</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">DS</div>
-        <nav class="nav">
-            <a href="#sobre">Sobre</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#meus-projetos">Projetos</a>
+    <header>
+        <div class="container-photo">
+            <img id="photo-perfil" src="image/perfil.png" alt="">
+        </div>
+        <div class="container-text">
+            <div>
+                <h2>
+                    <span class="name">Daniel Silva.</span>
+                    <span class="title">Web Development</span>
+                </h2>
+                <p>Sou um desenvolvedor focado em criar experiências digitais incríveis e funcionais. Transformo ideias
+                    em realidade com código limpo e design moderno.</p>
+                <button class="btn-theme">Mais sobre mim</button>
+            </div>
+        </div>
+
+        <nav class="side-nav">
+            <ul>
+                <li><a href="#home" class="nav-link active" title="Início"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#about" class="nav-link" title="Sobre Mim"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#skills" class="nav-link" title="Habilidades"><i class="fa-solid fa-code"></i></a></li>
+                <li><a href="#portfolio" class="nav-link" title="Portfólio"><i class="fa-solid fa-briefcase"></i></a>
+                </li>
+                <li><a href="#contact" class="nav-link" title="Contato"><i class="fa-solid fa-envelope"></i></a></li>
+            </ul>
         </nav>
-        <a href="#contato" class="btn-contato">Contato</a>
-    </header>
-    <header class="header-mobile">
-        <div class="logo-mobile">DS</div>
-
-        <button class="menu-btn-mobile" aria-label="Abrir menu">&#9776;</button>
-
-        <nav class="nav-mobile">
-            <button class="close-btn-mobile" aria-label="Fechar menu">&times;</button>
-            <a href="#sobre">Sobre</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#meus-projetos">Projetos</a>
-            <a href="#contato" class="btn-contato-mobile">Contato</a>
-        </nav>
-
-        <div class="overlay-mobile"></div>
     </header>
 
-    <section class="hero">
-        <div class="content">
-            <h1>Eu sou <span>Daniel Silva</span></h1>
-            <h2>Front-End Developer</h2>
-            <a href="#meus-projetos" class="btn-primary">Meus Projetos</a>
-        </div>
-        <div class="photo-frame">
-            <img src="imagens/Perfil.JPG" alt="Foto Daniel Silva">
-        </div>
-    </section>
+    <main>
+        <section id="about" class="section-about">
+            <h2 class="section-title">SOBRE <strong>MIM</strong></h2>
+            <div class="about-container">
+                <div class="personal-info">
+                    <h3>INFORMAÇÕES PESSOAIS</h3>
+                    <ul>
+                        <li><span class="info-title">Nome:</span> Daniel da Silva</li>
+                        <li><span class="info-title">Idade:</span> 21 Anos</li>
+                        <li><span class="info-title">Freelance:</span> Disponível</li>
+                        <li><span class="info-title">Telefone:</span> (83) 99162-5848</li>
+                        <li><span class="info-title">Nacionalidade:</span> Brasileiro</li>
+                        <li><span class="info-title">Email:</span> silvadanielDev@gmail.com</li>
+                        <li><span class="info-title">Idiomas:</span> Português, Inglês</li>
+                    </ul>
+                </div>
+                <div class="experience-data">
+                    <div class="stat-box">
+                        <h3>3+</h3>
+                        <p>ANOS DE EXPERIÊNCIA</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>11+</h3>
+                        <p>PROJETOS CONCLUÍDOS</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>11+</h3>
+                        <p>CLIENTES SATISFEITOS</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>5+</h3>
+                        <p>CERTIFICAÇÕES</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="sobre" class="sobre">
-        <h2>QUEM EU SOU?</h2>
-        <p>Tenho 21 anos e sou desenvolvedor front-end com foco em ReactJS e interfaces modernas. Sou apaixonado pela
-            área visual e sempre busco criar experiências agradáveis, com layouts que transmitam clareza, conforto e
-            identidade para cada cliente.</p>
-        <p>Tenho conhecimentos em design com Figma e utilizo ferramentas como TailwindCSS e Firebase para desenvolver
-            sites rápidos, acessíveis e visualmente atrativos. Sempre buscando o conforto e a melhor experiência para o
-            usuário</p>
 
-        <a href="#meus-projetos" class="btn-secondary">Ver Projetos</a>
-    </section>
+        <section class="my-skills">
+            <h2 class="section-title skill-title">MINHAS HABILIDADES</h2>
+            <div class="skills__grid">
+                <div class="skill-card" data-percent="87">
+                    <i class="fab fa-html5"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill"></div>
+                        <span class="skill-percent">87%</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-percent="64">
+                    <i class="fab fa-css3-alt"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill"></div>
+                        <span class="skill-percent">64%</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-percent="48">
+                    <i class="fab fa-js-square"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill"></div>
+                        <span class="skill-percent">48%</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-percent="70">
+                    <i class="fab fa-react"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill"></div>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-percent="60">
+                    <i class="fab fa-git-alt"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill"></div>
+                        <span class="skill-percent">60%</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-percent="50">
+                    <i class="fab fa-figma"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill"></div>
+                        <span class="skill-percent">50%</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-percent="55">
+                    <i class="fas fa-wind"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill"></div>
+                        <span class="skill-percent">55%</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-percent="40">
+                    <i class="fas fa-fire-alt"></i>
+                    <div class="skill-bar">
+                        <div class="skill-fill"></div>
+                        <span class="skill-percent">40%</span>
+                    </div>
+                </div>
+            </div>
 
-    <section id="habilidades" class="skills">
-        <h2 class="skills__title">MINHAS HABILIDADES</h2>
-        <div class="skills__grid">
-            <div class="skill-card">
-                <i class="fab fa-html5"></i>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-css3-alt"></i>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-js-square"></i>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-react"></i>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-git-alt"></i>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-figma"></i>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-wind"></i> <!-- Wind icon para Tailwind -->
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-fire-alt"></i> <!-- Fire-alt para Firebase -->
-            </div>
-        </div>
-    </section>
-    <section id="meus-projetos">
-        <h1>MEUS PROJETOS</h1>
+        </section>
 
-        <div class="projeto-card">
-            <img src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2023/02/Portfolio-Desenvolvedor-Web.png"
-                alt="Projeto 1">
-            <div class="projeto-info">
-                <h2>Portfólio Pessoal</h2>
-                <a href="https://github.com/seunome/portfolio" target="_blank" class="github-link">Ver no GitHub</a>
+        <section class="my-projects">
+            <h2 class="section-title skill-title">PROJETOS</h2>
+
+            <div class="layout-project-cards">
+                <div class="projeto-card">
+                    <img src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2023/02/Portfolio-Desenvolvedor-Web.png"
+                        alt="Projeto 1">
+                    <div class="projeto-info">
+                        <h2>Portfólio Pessoal</h2>
+                        <a href="https://github.com/seunome/portfolio" target="_blank" class="github-link">Ver no GitHub</a>
+                    </div>
+                </div>
+                <div class="projeto-card">
+                    <img src="https://venngage-wordpress-pt.s3.amazonaws.com/uploads/2020/03/loja-virtual-1.png"
+                        alt="Projeto 2">
+                    <div class="projeto-info">
+                        <h2>Loja Virtual</h2>
+                        <a href="https://github.com/seunome/loja-virtual" target="_blank" class="github-link">Ver no
+                            GitHub</a>
+                    </div>
+                </div>
+                <div class="projeto-card">
+                    <img src="https://png.pngtree.com/thumb_back/fh260/background/20230630/pngtree-3d-illustration-of-math-symbols-on-black-calculator-icon-image_3701395.jpg"
+                        alt="Projeto 3">
+                    <div class="projeto-info">
+                        <h2>Calculadora JS</h2>
+                        <a href="https://github.com/seunome/calculadora-js" target="_blank" class="github-link">Ver no
+                            GitHub</a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="projeto-card">
-            <img src="https://venngage-wordpress-pt.s3.amazonaws.com/uploads/2020/03/loja-virtual-1.png"
-                alt="Projeto 2">
-            <div class="projeto-info">
-                <h2>Loja Virtual</h2>
-                <a href="https://github.com/seunome/loja-virtual" target="_blank" class="github-link">Ver no GitHub</a>
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>Sinta-se à vontade para me chamar pelas redes sociais ou enviar um e-mail.</p>
+
+            <div class="redes-contato">
+                <a href="">Email</a>
+                <a href="https://www.instagram.com/silvadaniel__/profilecard/?igsh=eWJ6aHgwYTdrNjJ6"
+                    target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/in/daniel-silva-970093299?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app"
+                    target="_blank">LinkedIn</a>
+                <a href="https://github.com/danieldsilvadev" target="_blank">GitHub</a>
             </div>
-        </div>
-
-        <div class="projeto-card">
-            <img src="https://png.pngtree.com/thumb_back/fh260/background/20230630/pngtree-3d-illustration-of-math-symbols-on-black-calculator-icon-image_3701395.jpg"
-                alt="Projeto 3">
-            <div class="projeto-info">
-                <h2>Calculadora JS</h2>
-                <a href="https://github.com/seunome/calculadora-js" target="_blank" class="github-link">Ver no
-                    GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato">
-        <h2>Entre em Contato</h2>
-        <p>Sinta-se à vontade para me chamar pelas redes sociais ou enviar um e-mail.</p>
-
-        <div class="redes-contato">
-            <a href="">Email</a>
-            <a href="https://www.instagram.com/silvadaniel__/profilecard/?igsh=eWJ6aHgwYTdrNjJ6"
-                target="_blank">Instagram</a>
-            <a href="https://www.linkedin.com/in/daniel-silva-970093299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank">LinkedIn</a>
-            <a href="https://github.com/danieldsilvadev" target="_blank">GitHub</a>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <p>© 2025 Daniel Silva. Todos os direitos reservados.</p>

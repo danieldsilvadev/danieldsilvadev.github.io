@@ -1,292 +1,305 @@
-/* ============================================= */
-/* VARIÁVEIS GLOBAIS                          */
-/* ============================================= */
 :root {
-  /* Cores principais */
-  --color-background: #0d1224;
-  --color-primary: #c1ff45;
-  --color-primary-hover: #b7ff26;
-  --color-white: #ffffff;
-  --color-light-gray: #d3d3d3;
-  --color-blue-dark: #1a1e36;
-  --color-accent-blue: #3b82f6;
-  --color-purple: #8b5cf6;
-
-  /* Cores específicas de skills */
-  --color-skill-html: #e34f26;
-  --color-skill-css: #1572b6;
-  --color-skill-js: #f7df1e;
-  --color-skill-react: #61dafb;
-
-  /* Gradiente animado */
-  --c1: #c1ff45;
-  --c2: #3b82f6;
-  --c3: #facc15;
-  --c4: #8b5cf6;
-}
-
-/* Transições globais */
-a,
-button,
-.btn-primary,
-.btn-secondary,
-.btn-contato {
-  transition: all 0.3s ease;
+  --bg: #0D0D0D;            /* fundo geral */
+  --panel: #1C1C1C;         /* caixas, cards */
+  --text: #E5E5E5;          /* texto principal */
+  --muted: #A0A0A0;         /* texto secundário */
+  --accent: #1E90FF;        /* azul destaque */
+  --accent-strong: #3399FF; /* azul mais forte */
+  --accent-light: #66B2FF;  /* azul claro para hover */
 }
 
 
-/* ============================================= */
-/* RESET / ESTILO BASE                        */
-/* ============================================= */
+/* ==========================
+   Reset básico
+========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: 'Red Hat Display', sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-white);
-  line-height: 1.6;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* ============================================= */
-/* HEADER                                     */
-/* ============================================= */
-.header {
+/* ==========================
+   Header
+========================== */
+header {
+  background: linear-gradient(-295deg, var(--accent) 15%, var(--bg) 15%);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 5%;
-  background: transparent;
+  padding: 0px 15px 15px 15px;
 }
 
-.logo {
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--color-primary);
+/* ==========================
+   Container de foto
+========================== */
+.container-photo {
+  width: 350px;
+  height: 425px;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
 }
 
-.nav a {
-  margin: 0 1.5rem;
-  font-weight: 500;
-  color: var(--color-white);
-  opacity: 0.8;
-}
-
-.nav a:hover {
-  color: var(--color-primary);
-}
-
-.btn-contato {
-  padding: 0.6rem 1.2rem;
-  background-color: var(--color-primary);
-  border-radius: 50px;
-  font-weight: bold;
-  color: var(--color-background);
-}
-
-.btn-contato:hover {
-  background-color: var(--color-primary-hover);
-  filter: brightness(1.1);
-}
-
-/* ============================================= */
-/* HERO SECTION                               */
-/* ============================================= */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 7rem;
-  background: radial-gradient(ellipse at center, var(--color-blue-dark) 0%, var(--color-background) 100%);
-  min-height: 90vh;
-}
-
-.hero .content h1 {
-  font-size: 2.8rem;
-  font-weight: 900;
-  color: var(--color-white);
-}
-
-.hero .content h1 span {
-  color: var(--color-primary);
-}
-
-.hero .content h2 {
-  font-size: 1.5rem;
-  margin-top: 0.5rem;
-  color: var(--color-light-gray);
-}
-
-.btn-primary {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.8rem 1.6rem;
-  background-color: var(--color-primary);
-  color: var(--color-background);
-  font-weight: 700;
-  border-radius: 30px;
-}
-
-.btn-primary:hover {
-  background-color: var(--color-primary-hover);
-  filter: brightness(1.1);
-}
-
-/* ============================================= */
-/* PHOTO FRAME (Imagem com borda animada)     */
-/* ============================================= */
-.photo-frame {
-  display: inline-block;
-  padding: 4px;
-  border-radius: 20px;
-  background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3), var(--c4), var(--c1));
-  background-size: 400% 400%;
-  animation: gradientShift 6s ease infinite;
-
-  /* Adiciona transição e efeito de hover */
-  transition: transform 0.4s ease;
-}
-
-.photo-frame:hover {
-  transform: scale(1.05) rotate(3deg); /* Aumenta e gira a moldura inteira */
-}
-
-.photo-frame img {
-  display: block;
-  width: 300px;
-  height: 300px;
+#photo-perfil {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 16px;
-
-  /* Remove o hover individual da imagem para evitar conflito */
-  transition: transform 0.4s ease;
+  object-position: 50% 30%;
 }
 
-
-
-/* ============================================= */
-/* SOBRE                                      */
-/* ============================================= */
-.sobre {
-  text-align: center;
-  padding: 5rem 10%;
-  background-color: var(--color-blue-dark);
+/* ==========================
+   Texto principal
+========================== */
+.container-text {
+  width: 700px;
+  color: var(--muted);
 }
 
-.sobre h2 {
+.container-text h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.container-text h2 .name {
+  display: block;
+  color: var(--accent);
+}
+
+.container-text h2 .title {
+  display: block;
+  color: var(--text);
   font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: var(--color-primary);
+  margin-top: 5px;
 }
 
-.sobre p {
-  max-width: 800px;
-  margin: 0 auto 1rem auto;
-  color: var(--color-light-gray);
+.container-text p {
+  margin-top: 20px;
+  font-size: 1rem;
 }
 
-.btn-secondary {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.8rem 1.6rem;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
+.btn-theme {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1rem;
   font-weight: bold;
-  border-radius: 30px;
+  background-color: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.btn-secondary:hover {
-  background-color: var(--color-primary);
-  color: var(--color-background);
+.btn-theme:hover {
+  background-color: var(--accent-light);
 }
 
-/* ============================================= */
-/* SKILLS                                     */
-/* ============================================= */
-.skills {
-  padding: 5rem 10%;
-  background: var(--color-background);
+/* ==========================
+   Side nav
+========================== */
+.side-nav ul {
+  list-style: none;
+}
+
+.side-nav li {
+  margin: 20px 0;
+}
+
+.side-nav .nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #2b2b2b;
+  border-radius: 50%;
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.side-nav .nav-link:hover,
+.side-nav .nav-link.active {
+  background-color: var(--accent);
+  color: #000;
+}
+
+/* ==========================
+   Seções
+========================== */
+.section-about,
+.my-projects,
+#contato {
+  padding: 50px 20px;
+}
+
+.section-about {
+  background-color: #111;
+}
+
+.my-skills {
+  background-color: var(--bg);
+}
+
+.my-projects {
+  background-color: #111;
+}
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 3rem;
+  color: var(--text);
+  margin-bottom: 40px;
+}
+
+.section-title strong {
+  color: var(--accent);
+}
+
+.skill-title {
+  font-size: 2rem;
+}
+
+/* ==========================
+   Sobre
+========================== */
+.about-container {
+  display: flex;
+  padding: 50px 100px;
+  color: var(--text);
+}
+
+.personal-info {
+  flex-basis: 50%;
+}
+
+.personal-info h3 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.personal-info ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.personal-info li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.personal-info .info-title {
+  font-weight: bold;
+  color: var(--muted);
+  margin-right: 10px;
+}
+
+.experience-data {
+  flex-basis: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.stat-box {
+  border: 1px solid #2b2b2b;
+  border-radius: 8px;
+  padding: 25px;
   text-align: center;
 }
 
-.skills__title {
-  font-size: 2.5rem;
-  color: var(--color-primary);
-  margin-bottom: 2rem;
+.stat-box h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
 }
 
+.stat-box p {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ==========================
+   Skills
+========================== */
 .skills__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 50px 100px;
 }
 
 .skill-card {
-  width: 100px;
-  height: 100px;
-  background: var(--color-blue-dark);
+  background-color: var(--panel);
+  padding: 20px;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.skill-card i {
-  font-size: 2.5rem;
-  color: var(--color-white);
+  text-align: center;
+  color: var(--text);
+  transition: transform 0.3s ease;
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-/* ============================================= */
-/* PROJETOS                                   */
-/* ============================================= */
-#meus-projetos {
-  padding: 4rem 5%;
-  background:  radial-gradient(ellipse at center, var(--color-blue-dark) 0%, var(--color-background) 100%);
-  color: var(--color-white);
+.skill-card i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: var(--accent);
 }
 
-#meus-projetos h1 {
-  font-size: 2.5rem;
-  color: var(--color-primary);
-  text-align: center;
-  margin-bottom: 3rem;
-  font-family: 'Red Hat Display', sans-serif;
+.skill-bar {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  position: relative;
 }
 
+.skill-fill {
+  background-color: var(--accent);
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+.skill-percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* ==========================
+   Projetos
+========================== */
 .projeto-card {
   display: flex;
   align-items: center;
   gap: 2rem;
-  background-color: var(--color-blue-dark);
+  background-color: var(--panel);
   padding: 1.5rem;
   border-radius: 16px;
   margin-bottom: 2rem;
   flex-wrap: wrap;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-5px);
 }
 
 .projeto-card img {
@@ -298,214 +311,244 @@ a {
 
 .projeto-info h2 {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--color-primary);
-  font-family: 'Red Hat Display', sans-serif;
+  margin-bottom: 10px;
+  color: var(--text);
 }
 
 .github-link {
-  color: var(--color-accent-blue);
-  font-weight: 600;
+  display: inline-block;
+  padding: 8px 20px;
+  font-weight: bold;
+  color: #000;
+  background-color: var(--accent);
+  border-radius: 8px;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .github-link:hover {
-  color: var(--color-primary-hover);
-  filter: brightness(1.1);
+  background-color: var(--accent-light);
+  transform: translateY(-3px);
 }
 
-/* ============================================= */
-/* CONTATOS                                   */
-/* ============================================= */
+/* ==========================
+   Contato
+========================== */
 #contato {
   padding: 60px 20px;
   text-align: center;
-  animation: fadeInUp 1s ease-in-out both;
+  background-color: var(--bg);
 }
 
 #contato h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
-  color: var(--color-primary);
-  animation: fadeIn 1.2s ease-in-out;
+  color: var(--text);
 }
 
 #contato p {
   font-size: 1.1rem;
-  color: var(--color-light-gray);
-  margin-bottom: 40px;
-  animation: fadeIn 1.4s ease-in-out;
+  margin-bottom: 30px;
 }
 
-/* Links das redes */
 .redes-contato {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .redes-contato a {
-  background-color: var(--color-primary);
-  color: var(--color-background);
-  padding: 12px 24px;
-  border-radius: 30px;
+  padding: 10px 25px;
+  background-color: var(--panel);
+  color: var(--accent);
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s, transform 0.3s;
-  animation: fadeInUp 1.6s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 .redes-contato a:hover {
-  background-color: var(--color-primary-hover);
-  filter: brightness(1.1);
-  transform: scale(1.05);
+  background-color: var(--accent);
+  color: #000;
+  transform: translateY(-3px);
 }
 
-/* FOOTER */
+/* ==========================
+   Footer
+========================== */
 .footer {
+  background-color: var(--bg); /* mesmo tom dos cards */
+  color: var(--muted);
   text-align: center;
-  padding: 1rem;
+  padding: 20px 10px;
   font-size: 0.9rem;
-  color: var(--color-primary);
-  border-top: 1px solid var(--color-blue-dark);
+  border-top: 1px solid #2b2b2b;
+  margin-top: 25px;
 }
 
 .footer p {
   margin: 0;
-  letter-spacing: 0.5px;
 }
 
 
 
-/* ============================================= */
-/* MEDIA QUERIES                              */
-/* ============================================= */
+/* ==========================
+   Mobile / Responsivo
+========================== */
 @media (max-width: 768px) {
-  .header {
-    display: none;
-  }
 
-  .nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  .nav a {
-    margin: 0;
-  }
-
-  .hero {
-    justify-content: space-around;
+  /* ==========================
+     Header
+  ========================== */
+  header {
+    background: linear-gradient(-295deg, var(--accent) 15%, var(--bg) 15%);
     flex-direction: column;
+    align-items: center;
+    padding: 15px;
+
+  }
+
+  /* ==========================
+     Container de foto
+  ========================== */
+  .container-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    border: var(--accent) solid 2px;
+  }
+
+  #photo-perfil {
+    object-position: 50% 20%;
+  }
+
+  /* ==========================
+     Texto principal
+  ========================== */
+  .container-text {
+    width: 90%;
     text-align: center;
-    padding: 3rem 5%;
   }
 
-  .hero .content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero .content h2 {
-    font-size: 1.2rem;
-  }
-
-  .photo-frame img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .sobre {
-    padding: 4rem 8%;
-  }
-
-  .skills {
-    padding: 4rem 8%;
-  }
-
-  .skills__title {
+  .container-text h2 {
     font-size: 2rem;
   }
 
+  .container-text h2 .title {
+    font-size: 1.5rem;
+  }
+
+  .btn-theme {
+    width: 80%;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+
+  /* ==========================
+     Side nav
+  ========================== */
+  .side-nav {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .side-nav ul {
+    display: flex;
+    gap: 15px;
+  }
+
+  /* ==========================
+     Seções
+  ========================== */
+  .section-about,
+  .my-projects,
+  #contato {
+    padding: 30px 10px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-title strong {
+    font-size: 2rem;
+  }
+
+  /* ==========================
+     Sobre
+  ========================== */
+  .about-container {
+    flex-direction: column;
+    padding: 30px 10px;
+    text-align: center;
+  }
+
+  .personal-info {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .experience-data {
+    flex-basis: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  /* ==========================
+     Skills
+  ========================== */
   .skills__grid {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 10px;
   }
 
-  .skill-card {
-    width: 80px;
-    height: 80px;
-  }
-
-  .skill-card i {
-    font-size: 2rem;
-  }
-
-  .btn-primary,
-  .btn-secondary,
-  .btn-contato {
-    width: 100%;
-    text-align: center;
-    padding: 0.8rem;
-  }
-
+  /* ==========================
+     Projetos
+  ========================== */
   .projeto-card {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 
   .projeto-card img {
     width: 100%;
+    max-width: 250px;
     height: auto;
   }
-}
 
-@media (max-width: 600px) {
+  .projeto-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .github-link {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  /* ==========================
+     Contato
+  ========================== */
   #contato h2 {
     font-size: 2rem;
   }
 
+  #contato p {
+    font-size: 1rem;
+  }
+
+  .redes-contato {
+    gap: 15px;
+  }
+
   .redes-contato a {
-    width: 100%;
+    width: 80%;
     text-align: center;
   }
-}
 
-/* ============================================= */
-/*  ANIMAÇÕES (KEYFRAMES)                     */
-/* ============================================= */
-@keyframes gradientShift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 
