@@ -1,11 +1,18 @@
 :root {
-  --bg: #0D0D0D;            /* fundo geral */
-  --panel: #1C1C1C;         /* caixas, cards */
-  --text: #E5E5E5;          /* texto principal */
-  --muted: #A0A0A0;         /* texto secundário */
-  --accent: #1E90FF;        /* azul destaque */
-  --accent-strong: #3399FF; /* azul mais forte */
-  --accent-light: #66B2FF;  /* azul claro para hover */
+  --bg: #0D0D0D;
+  /* fundo geral */
+  --panel: #1C1C1C;
+  /* caixas, cards */
+  --text: #E5E5E5;
+  /* texto principal */
+  --muted: #A0A0A0;
+  /* texto secundário */
+  --accent: #1E90FF;
+  /* azul destaque */
+  --accent-strong: #3399FF;
+  /* azul mais forte */
+  --accent-light: #66B2FF;
+  /* azul claro para hover */
 }
 
 
@@ -132,9 +139,7 @@ header {
 /* ==========================
    Seções
 ========================== */
-.section-about,
-.my-projects,
-#contato {
+section {
   padding: 50px 20px;
 }
 
@@ -156,7 +161,6 @@ header {
   gap: 1rem;
   font-size: 3rem;
   color: var(--text);
-  margin-bottom: 40px;
 }
 
 .section-title strong {
@@ -172,8 +176,15 @@ header {
 ========================== */
 .about-container {
   display: flex;
+  width: 100%;
   padding: 50px 100px;
   color: var(--text);
+}
+
+.teste {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .personal-info {
@@ -233,6 +244,7 @@ header {
 ========================== */
 .skills__grid {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 50px 100px;
@@ -286,6 +298,12 @@ header {
 /* ==========================
    Projetos
 ========================== */
+
+.layout-project-cards {
+  padding: 50px 100px;
+  width: 100%;
+}
+
 .projeto-card {
   display: flex;
   align-items: center;
@@ -378,7 +396,8 @@ header {
    Footer
 ========================== */
 .footer {
-  background-color: var(--bg); /* mesmo tom dos cards */
+  background-color: var(--bg);
+  /* mesmo tom dos cards */
   color: var(--muted);
   text-align: center;
   padding: 20px 10px;
@@ -402,12 +421,21 @@ header {
      Header
   ========================== */
   header {
-    background: linear-gradient(-295deg, var(--accent) 15%, var(--bg) 15%);
+    background: var(--bg);
     flex-direction: column;
     align-items: center;
     padding: 15px;
 
   }
+
+  .teste {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .layout-project-cards {
+  padding: 25px 0;
+}
 
   /* ==========================
      Container de foto
@@ -551,4 +579,3 @@ header {
   }
 
 }
-
